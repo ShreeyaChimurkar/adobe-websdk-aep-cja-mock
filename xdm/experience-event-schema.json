@@ -1,0 +1,36 @@
+{
+  "title": "Mock Telecom Experience Event",
+  "type": "object",
+  "properties": {
+    "eventType": { "type": "string" },
+    "web": {
+      "properties": {
+        "webPageDetails": {
+          "properties": {
+            "name": { "type": "string" },
+            "siteSection": { "type": "string" }
+          }
+        }
+      }
+    },
+    "commerce": {
+      "properties": {
+        "addToCart": {
+          "properties": {
+            "value": { "type": "number" }
+          }
+        }
+      }
+    },
+    "productListItems": {
+      "type": "array",
+      "items": {
+        "properties": {
+          "SKU": { "type": "string" },
+          "name": { "type": "string" },
+          "priceTotal": { "type": "number" }
+        }
+      }
+    }
+  }
+}
