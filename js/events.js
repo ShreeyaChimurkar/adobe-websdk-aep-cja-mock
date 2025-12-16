@@ -27,7 +27,7 @@ function buildXDM(eventName) {
   };
 }
 
-function sendToMockEndpoint(payload) {
+/*function sendToMockEndpoint(payload) {
   console.log("Mock Adobe Web SDK Payload", payload);
 
   fetch("https://httpbin.org/post", {
@@ -35,4 +35,14 @@ function sendToMockEndpoint(payload) {
     headers: { "Content-Type": "application/json" },
     body: JSON.stringify(payload)
   });
+}*/
+function sendToMockEndpoint(payload) {
+  console.log("Mock Adobe Web SDK Payload", payload);
+  // Simulate network request
+  const simulatedRequest = new Blob(
+    [JSON.stringify(payload, null, 2)],
+    { type: "application/json" }
+  );
+  console.log("Simulated Network Request:", simulatedRequest);
 }
+
